@@ -1,0 +1,51 @@
+.pawn {
+  width: calc(100% / 8);
+  height: calc(100% / 8);
+  position: absolute;
+  z-index: 10;
+  transition: top 0.3s, left 0.3s, scale 0.3s, background-color 0s;
+  user-select: none;
+}
+
+.pawn.active {
+  cursor: pointer;
+  background-color: rgba(255, 217, 0, 0.513);
+}
+
+.pawn.maybe {
+  cursor: pointer;
+  background-color: rgba(255, 217, 0, 0.513);
+  transition: top 0.3s, left 0.3s, scale 0.3s, background-color 0.3s;
+}
+
+.pawn-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  scale: 0.8;
+  z-index: 100;
+}
+.pawn.black .pawn-circle {
+  background-color: #4e495e;
+}
+.pawn.white .pawn-circle {
+  background-color: #f3f3ff;
+}
+
+.pawn.active .pawn-circle {
+  /* box-shadow: 0px 0px 20px rgb(6, 193, 44), 0px 0px 30px rgba(6, 193, 43, 0.467); */
+  scale: 0.85;
+}
+.pawn.maybe .pawn-circle {
+  /* box-shadow: 0px 0px 20px rgb(6, 193, 44); */
+}
+.pawn img {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  scale: 0.7;
+}

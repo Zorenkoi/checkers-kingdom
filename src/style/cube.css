@@ -1,0 +1,71 @@
+.cube {
+  position: relative;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+.cube.black {
+  background-color: #c48b79;
+}
+.cube.white {
+  background-color: #fdd1a3;
+}
+
+.cube .border {
+  position: relative;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  transition-duration: 0.2s;
+}
+
+.cube.black::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  height: 40%;
+  transform: translateY(-50%);
+  background-color: #c48b79;
+  z-index: 10;
+}
+.cube.black::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 40%;
+  height: 100%;
+  transform: translateX(-50%);
+  background-color: #c48b79;
+  z-index: 10;
+}
+
+.cube.move {
+  cursor: pointer;
+}
+.cube.move .border {
+  border: 4px solid rgb(239, 206, 18);
+}
+.cube.move:hover .border {
+  scale: 0.9;
+}
+.cube.kill {
+  cursor: pointer;
+}
+.cube.kill .border {
+  border: 4px solid rgb(169, 46, 46);
+}
+.cube.kill:hover .border {
+  scale: 0.9;
+}
+
+@media (max-width: 430px) {
+  .cube.move .border {
+    border: 3px solid rgb(239, 206, 18);
+  }
+  .cube.kill .border {
+    border: 3px solid rgb(169, 46, 46);
+  }
+}

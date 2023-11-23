@@ -1,0 +1,201 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.5s;
+  z-index: 99;
+
+  opacity: 0;
+  pointer-events: none;
+}
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-body {
+  max-width: 350px;
+  min-height: 100px;
+  background-color: rgb(31, 23, 68);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+
+  transition: scale 0.5s;
+  scale: 0;
+  text-align: center;
+}
+
+.modal.active .modal-body {
+  scale: 1;
+}
+
+/* /////////////////////////////////////// */
+.modal-img-container {
+  width: 100%;
+  height: 200px;
+  margin: 0px auto;
+  position: relative;
+}
+.modal-img-container img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  animation: tudaSuda 4s ease-in-out infinite;
+}
+
+.modal-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.modal-input-container {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.modal-input-container label {
+  font-size: 25px;
+  margin-right: 20px;
+}
+.modal-checkbox {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.modal-button-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.modal-button {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  padding: 0px 10px;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  background-color: white;
+  color: black;
+
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: top 0.3s;
+}
+.modal-button:active {
+  top: 1px;
+}
+
+.modal-button.muted {
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+.modal-button.muted:hover {
+  opacity: 1;
+}
+
+@keyframes tudaSuda {
+  0% {
+    scale: 0.9;
+  }
+
+  25% {
+    scale: 1.05;
+  }
+
+  50% {
+    scale: 0.9;
+  }
+
+  75% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 0.9;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .modal-input-container label {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  .modal-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  .modal-button {
+    height: 40px;
+    font-size: 20px;
+  }
+  .modal-img-container {
+    width: 80%;
+    height: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    align-items: start;
+    padding-top: 30%;
+  }
+  .modal-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .modal-input-container label {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  .modal-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  .modal-button {
+    height: 35px;
+    border-radius: 100px;
+
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.text-start {
+  /* text-align: start; */
+}
+
+@media (max-width: 400px) {
+  .modal-body {
+    width: 80%;
+    min-width: unset;
+    /* min-height: 100px; */
+
+    border-radius: 15px;
+    padding: 30px 20px 20px;
+  }
+}
