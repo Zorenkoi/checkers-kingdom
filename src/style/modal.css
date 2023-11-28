@@ -107,7 +107,7 @@
 }
 
 .modal-button.muted {
-  opacity: 0.8;
+  opacity: 0.7;
   transition: opacity 0.5s;
 }
 .modal-button.muted:hover {

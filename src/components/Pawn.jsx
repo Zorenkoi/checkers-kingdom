@@ -99,7 +99,7 @@ const Pawn = ({ y, x, pawnColor, pawnId, job }) => {
     }
 
     if (job === "queen") {
-      playChooseSound();
+      if (soundOn) playChooseSound();
       clickQueen();
       return;
     }

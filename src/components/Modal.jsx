@@ -109,7 +109,7 @@ const WinModal = ({ text }) => {
       <h2 className="modal-title">{text}</h2>
       <div className="modal-button-container">
         <div onClick={clickNext} className="modal-button">
-          наступна гра
+          наступний раунд
         </div>
         <div onClick={clickRestart} className="modal-button muted">
           нова гра
